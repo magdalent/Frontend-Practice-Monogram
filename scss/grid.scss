@@ -1,0 +1,182 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include center;
+    margin-top: 4rem;
+    grid-row-gap: 2rem;
+
+    @include respond(big-screen){
+        grid-template-columns: 1fr;
+    }
+        &__item{
+            display: grid;
+            grid-template-columns: repeat(3, 180px);
+            grid-template-rows: repeat(4, max-content);
+
+            @include respond(small-screen-one){
+                grid-template-columns: 100px;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+            
+                &--img{
+                    width: 100%;
+                    height: auto;
+                    grid-column: 1 / span 3;
+                    grid-row: 1 / span 2;
+                    margin-bottom: 1rem;
+
+            @include respond(small-screen-one){
+                @include resized-border(2px, solid, $primary-purple);
+            }
+                }
+                &--img2{
+                    width: 100%;
+                    height: auto;
+                    grid-column: 1 / span 3;
+                    grid-row: 1 / span 2;
+                    margin-bottom: 1rem;
+                    opacity: 0;
+                    transition: all .9s;
+                        &:hover{
+                            opacity: 1;
+                        }
+                }
+                &--title{
+                    text-transform: uppercase;
+                }
+                &--info{
+                    grid-row: 4;
+                    grid-column: 1/ span 3;
+                }
+                &--price{
+                    grid-column: 3;
+                    grid-row: 3;
+                    align-self: end;
+                    justify-self: end;
+                }
+                &--shopnow{
+                    grid-column: 3;
+                    grid-row: 3;
+                    align-self: end;
+                    padding: 0.5rem;
+                    background-color: $primary-purple;
+                    text-align: center;
+                    border-radius: 50px;
+                    color: white;
+                    opacity: 0;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        
+                }
+            &--stock{
+                grid-row: 1;
+                grid-column: 3;
+                background-color: $primary-purple;;
+                color: $white;
+                padding: 1rem;
+                align-self: end;
+                justify-self: end;
+                z-index: 10;
+                position: relative;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+            
+        }
+}
+
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 4rem;
+    grid-row-gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+        @include respond(big-screen){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond(medium-screen-one){
+            grid-template-columns:  1fr;
+        }
+
+        &__item{
+            display: grid;
+            grid-template-columns: repeat(3, 120px);
+            grid-template-rows: repeat(4, max-content);
+
+            @include respond(small-screen-one){
+                grid-template-columns: 100px;
+                margin-left: 2rem;
+                margin-right: 2rem;
+            }
+                &--img{
+                    width: 100%;
+                    height: auto;
+                    grid-column: 1 / span 3;
+                    grid-row: 1 / span 2;
+                    margin-bottom: 1rem;
+
+                    @include respond(small-screen-one){
+                        @include resized-border(4px, solid, $primary-purple);
+
+                    }
+                }
+                &--img2{
+                    width: 100%;
+                    height: auto;
+                    grid-column: 1 / span 3;
+                    grid-row: 1 / span 2;
+                    margin-bottom: 1rem;
+                    opacity: 0;
+                    transition: all .9s;
+                        &:hover{
+                            opacity: 1;
+                        }
+
+                }
+                &--title{
+                    text-transform: uppercase;
+                    grid-column: 1/ span 2;
+                }
+           
+                &--price{
+                    grid-column: 3;
+                    grid-row: 3;
+                    align-self: end;
+                    justify-self: end;
+                }
+                &--shopnow{
+                    grid-column: 3;
+                    grid-row: 3;
+                    align-self: end;
+                    padding: 0.5rem;
+                    background-color: $primary-purple;;
+                    text-align: center;
+                    border-radius: 50px;
+                    color: $white;
+                    opacity: 0;
+                        &:hover{
+                            opacity: 1;
+                        }
+                        
+                }
+            &--stock{
+                grid-row: 1;
+                grid-column: 3;
+                background-color: $primary-purple;;
+                color: $white;
+                z-index: 10;
+                position: relative;
+                padding: 1rem;
+                align-self: end;
+                justify-self: end;
+                box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+            }
+            
+        }
+}

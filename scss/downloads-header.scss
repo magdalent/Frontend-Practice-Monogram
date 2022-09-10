@@ -1,0 +1,106 @@
+.download-header{
+    @include downloads-heights;
+    position: relative;
+    animation: downloads-header 10s infinite;
+    z-index: -15;   
+
+   
+            &--content{
+                position: absolute;
+                top: 6rem;
+                left:2rem;
+                text-transform: uppercase;
+               
+        
+                &-sub{
+                    color: #ffffff;
+                    font-size: 1.4rem;
+                    letter-spacing: 0.51rem;
+                }
+
+                &-title{
+                    span{
+                        font-size: 4.5rem;
+                          
+                            @include respond(small-screen-one){
+                                font-size: 3rem;
+                            }
+                            @include respond(smallest-screen){
+                                font-size: 2.3rem;
+                            }
+                           
+                        }
+                    }
+                &-title2{
+                    color: #FAF4B7;
+                    font-size: 2rem;
+                    letter-spacing: 1rem;
+                    }
+            }
+}
+
+@keyframes downloads-header{
+    0%{
+     background:
+     repeating-linear-gradient(
+        45deg,
+        $primary-purple,
+        $primary-purple 40px,
+        $secondary-purple 40px,
+        $secondary-purple 50px 
+     );
+    }
+    20%{
+      background: 
+          repeating-linear-gradient(
+          -45deg,
+          $primary-purple,
+          $primary-purple 40px,
+          $secondary-purple 40px,
+          $secondary-purple 50px 
+        );
+    }
+  
+   40%{
+   background: 
+       repeating-linear-gradient(
+          180deg,
+          $primary-purple,
+          $primary-purple 40px,
+          $secondary-purple 40px,
+          $secondary-purple 50px 
+     );
+  }
+    
+    60%{
+      background: 
+      repeating-linear-gradient(
+        80deg,
+        $primary-purple,
+        $primary-purple 40px,
+        $secondary-purple 40px,
+        $secondary-purple 50px 
+       );
+    
+    }
+    80%{
+      background: 
+      repeating-linear-gradient(
+        180deg,
+        $primary-purple,
+        $primary-purple 40px,
+        $secondary-purple 40px,
+        $secondary-purple 50px 
+       );
+    }
+   100%{
+    background: 
+    repeating-linear-gradient(
+        45deg,
+        $primary-purple,
+        $primary-purple 40px,
+        $secondary-purple 40px,
+        $secondary-purple 50px 
+       );
+  } 
+  }

@@ -1,0 +1,65 @@
+.create{
+    width: 100vw;
+    height: 70vh;
+    position: relative;
+    margin-top: 4rem;
+
+    @include respond(medium-screen-footer){
+        height: 60vh;
+        background: 
+        repeating-linear-gradient(
+         180deg,
+         $primary-purple,
+         $primary-purple 40px,
+         $secondary-purple 40px,
+         $secondary-purple 50px 
+        );
+    }
+        &__bkrnd{
+            width: inherit;
+            height: inherit;
+                @include respond(medium-screen-footer){
+                    width: 0;
+                    height: 0;  
+            }
+        }
+        &__text{
+            z-index: 100;
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            color: #1a2456;
+            text-transform: uppercase;
+            transform: translate(-50%, -5%);
+            width: 50%;
+            @include respond(medium-screen-footer){
+                color: $white;
+                top: 15%;
+
+            }
+               
+        }
+}
+
+.create__txt--title{
+    font-size: 2.8rem;
+    text-align: center;
+    color: white;
+    @include respond(medium-screen-footer){
+        font-size: 3.2rem;
+        color: #e3f4ff;
+
+
+    }
+}
+.create__txt--para{
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+
+    @include respond(medium-screen-footer){
+        color: #FAF4B7;
+
+
+    }
+}

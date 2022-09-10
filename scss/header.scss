@@ -1,0 +1,113 @@
+.header{
+    width: 100vw;
+    animation: images 10s infinite;
+    position: relative;
+    z-index: -3;
+    height: 100vh;
+
+
+      @include respond(medium-screen-popup){
+        height: 70vh;
+
+      }
+
+     
+    &__content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $primary-purple;
+        padding: 1rem;
+        z-index: -2;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        &--title{
+            text-transform: uppercase;
+            font-size: 2rem;
+            color: $light-pink;
+            font-weight: 800;
+            text-align: center;
+        }
+        &--para{
+            color: $light-pink;
+            text-align: center;
+        }
+      }
+}
+
+
+    @keyframes images{
+        0%{
+          background: 
+          repeating-linear-gradient(
+            45deg,
+            #1a2456,
+            #1a2456 40px,
+            #ff8b68 40px,
+            #ff8b68 50px 
+          );
+        }
+        20%{
+     
+          background: 
+          repeating-linear-gradient(
+            250deg,
+            #1a2456,
+            #1a2456 40px,
+            #ff8b68 40px,
+            #ff8b68 50px 
+          );
+        }
+      
+        
+       40%{
+       
+        background: 
+        repeating-linear-gradient(
+          200deg,
+          #1a2456,
+          #1a2456 40px,
+          #ff8b68 40px,
+          #ff8b68 50px 
+        );
+      }
+        
+        60%{
+      
+          background: 
+          repeating-linear-gradient(
+            180deg,
+            #1a2456,
+            #1a2456 40px,
+            #ff8b68 40px,
+            #ff8b68 50px 
+          );
+        
+        }
+        80%{
+         
+          background: 
+          repeating-linear-gradient(
+            -45deg,
+            #1a2456,
+            #1a2456 40px,
+            #ff8b68 40px,
+            #ff8b68 50px
+          );
+        
+        }
+       100%{
+     
+        
+        background: 
+        repeating-linear-gradient(
+          45deg,
+          #1a2456,
+          #1a2456 40px,
+          #ff8b68 40px,
+          #ff8b68 50px 
+        );
+      
+  }
+    
+}

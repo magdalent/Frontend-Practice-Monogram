@@ -1,0 +1,173 @@
+.slideout{
+    width: 37rem;
+    background-color: $white;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    right: -6rem;
+    top: 3.2rem;
+    opacity: 0;
+    color: $primary-purple;
+    z-index: 15;
+  
+    @include respond(small-screen-one){
+        width: 30rem;
+
+    }
+    @include respond(  very-small-screen){
+        width: 22rem;
+
+    }
+
+        &__grid{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(10,minmax(min-content, max-content));
+            grid-row-gap: 0.2rem;
+           
+            &--title{
+                background-color: $primary-purple;
+                color: $white;
+                padding: 2rem;
+                grid-column: 2/ span 4;
+            }
+
+            &--subtotal{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(3,minmax(min-content, max-content));
+                grid-row-gap: 1.2rem;
+                background-color: $primary-purple;
+                color: $white;
+                padding: 1.5rem;
+                grid-row: 8;
+                grid-column: 1/ span 4;
+                height: 17.5rem;
+             
+                    &-btn{
+                        grid-column: 1/ span 2;
+                        width: 90%;
+                        height: 1.9rem;
+                        margin-left: 1.4rem;
+                        border-radius: 50px;
+
+                        @include respond(small-screen-one){
+                            width: 80%;
+
+                        }
+                    }
+                    &-gift{
+                        grid-column: 1/ span 2;
+                        grid-row: 3;
+                        text-align: center;
+                    }
+                    &-price{
+                        justify-content: end;
+                        justify-self: end;
+                        margin-right: 2rem;
+                        @include respond(small-screen-one){
+                            justify-content: center;
+                            justify-self: center;
+                        }
+                   
+                    }
+
+            }
+                &--title{
+                    grid-column: 1 / span 4;
+                    font-size: 1.2rem;
+                    color: $light-pink;
+                    font-weight: 700;
+                    grid-row: 1;
+                }
+                &--main{
+                    grid-row: 2;
+                    grid-column: 1 / span 4;
+                    display: grid;
+                    grid-row-gap: 1.4rem;
+                    grid-template-rows: repeat(4,minmax(min-content, max-content));
+                    text-align: center;
+                    padding: 4rem;
+                    background-color: $primary-purple;
+
+                        &-title{
+                            font-size: 1.2rem;
+                            color:  $light-pink;;
+                        }
+                        &-para{
+                            text-align: center;
+                            color:  $white;
+                        }
+
+                }
+                &--payments{
+                    grid-row: 3;
+                    grid-column: 1 / span 4;
+                    display: grid;
+                    grid-template-rows: repeat(2,50px);
+                    grid-template-columns: repeat(5, 1fr);
+                    margin-right: 5rem;
+
+                        @include respond(small-screen-one){
+                            grid-template-columns: repeat(5, 70px);
+                            @include center;
+                        }
+                    &-title{
+                        grid-column: 1 / span 5;
+                        font-size: 1.2rem;
+                        margin-left: 1.4rem;
+
+                    }
+                        &-img1{
+                            grid-row: 2;
+                            grid-column: 1;
+                            
+                        }
+                        &-img2{
+                            grid-row: 2;
+                            grid-column: 2;
+                        }
+                        &-img3{
+                            grid-row: 2;
+                            grid-column: 3;
+                        }
+                        &-img4{
+                            grid-row: 2;
+                            grid-column: 4;
+                        }
+                        &-img5{
+                            grid-row: 2;
+                            grid-column: 5;
+                        }
+                        &-img6{
+                            grid-row: 2;
+                            grid-column: 6;
+                        }
+                }
+        }
+        
+        
+}
+
+.slide-out-check:checked + .slideout{
+    opacity: 1;
+    height: 100vh;
+    animation: slide-out .9s ease;
+}
+
+
+@keyframes slide-out {
+    0% {
+      transform: translateX(900px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  .img-shop{
+      margin-top: -1rem;
+  }
+  .slide-out-check{
+      opacity: 0;
+      visibility: hidden;
+  }
