@@ -1,7 +1,0 @@
-$font-colors:(#EBC7E8, #FAF4B7, #FFCCB3, #B1E1FF,#B2A4FF ,#FFB4B4,#FFDEB4, #FFF9CA);
-$colors-2:( #EBC7E8, #FAF4B7, #FFCCB3, #B1E1FF,#B2A4FF);
-@for $i from 1 through 8{
-  span:nth-child(#{$i}){
-    color: nth($font-colors, $i);
-  }
-}
