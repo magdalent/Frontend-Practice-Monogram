@@ -1,0 +1,85 @@
+@mixin downloads-heights{
+    width: 100vw;
+    height: 70vh;
+}
+@mixin center {
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
+}
+@mixin resized-border($size,$style, $color){
+    border: $size $style $color;
+}
+//MEDIA
+@mixin respond($tabs) {
+    @if($tabs == very-big-screen){
+        @media (max-width: 3000px){
+            @content;
+     }
+    }
+    @if($tabs == big-screen-two){
+        @media (max-width: 1200px){
+            @content;
+     }
+    }
+    @else if($tabs == big-screen) {
+        @media (max-width: 1150px){
+           @content;
+        }
+    }@else if($tabs == medium-screen-footer){
+        @media (max-width: 980px){
+            @content;
+     }
+    }
+    @else if($tabs == medium-screen-popup){
+        @media (max-width: 900px){
+            @content;
+     }
+    }
+    @else if($tabs == medium-screen-one){
+        @media (max-width: 800px){
+        @content;
+     }
+    }
+    @else if($tabs == medium-screen-two){
+        @media (max-width: 710px){
+        @content;
+     }
+    }
+    @else if($tabs == small-screen-two){
+        @media (max-width: 600px){
+        @content;
+     }
+    }
+    @else if($tabs == small-screen-two-popup){
+        @media (max-width: 620px){
+        @content;
+     }
+    }
+    @else if($tabs == small-screen-one){
+        @media (max-width: 570px){
+        @content;
+     }
+    }
+    @else if($tabs == very-small-screen){
+        @media (max-width: 450px){
+        @content;
+     }
+    }
+    @else if($tabs == very-small-screen-downloads){
+        @media (max-width: 420px){
+        @content;
+     }
+    }
+    @else if($tabs == smallest-screen){
+        @media (max-width: 370px){
+        @content;
+     }
+    }
+    @else if($tabs == final-smallest-screen){
+        @media (max-width: 340px){
+        @content;
+     }
+    }
+}
+

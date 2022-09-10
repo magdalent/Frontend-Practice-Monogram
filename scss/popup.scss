@@ -1,0 +1,99 @@
+.popup{
+    position: fixed;
+    background-color: rgba(0,0,0, 0.6);
+    width: 100vw;
+    height: 100vh;
+    z-index: 150000;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+
+        &:target{
+            opacity: 1;
+            visibility: visible;
+        }
+        &__close{
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $white;
+            background-color: $primary-purple;
+        }
+    &__content{
+        width: 70%;
+        height: 60%;
+        background-color:$white;
+        position: absolute;
+        top: 50%;
+        padding: 2rem;
+        left: 50%;
+        border-radius: 5px;
+        transform: translate(-50%, -50%);
+
+            @include respond(medium-screen-popup){
+                height: 70%;
+                background-image: linear-gradient(to bottom right, #E8C3B5, white);
+            }
+            @include respond(small-screen-two-popup){
+                height: 80%;
+                background-image: linear-gradient(to left, white, #E8C3B5);
+            }
+            &--grid{
+                display: grid;
+                grid-template-columns: repeat(3, minmax(min-content, max-content));
+                grid-template-rows: repeat(5, minmax(min-content, max-content));
+                grid-gap: 0.5rem;
+
+
+                &-info{
+                    font-size: 1rem;
+                    grid-row: 3;
+                    grid-column: 2;
+                }
+                    &-image{
+                     width: 100%;
+                     height: 16rem;
+                     grid-row: 1/ span 4;
+                     grid-column: 1;
+
+                        @include respond(medium-screen-popup){
+                            width: 0;
+                            height: 0;
+                        }
+
+                    }
+                
+                    &-duration{
+                        width: 100%;
+                        height: 4rem;
+                        padding: 0.5rem 0.8rem;
+                        background-color: $primary-purple;
+                        color: $white;
+
+
+                    }
+                    &-readmore{
+                        padding: 0.5rem 0.8rem;
+                        grid-row: 4;
+                        grid-column: 2;
+                        text-align: center;
+                        background-color: $primary-purple;
+                        color: #ffffff ;
+                        width: 60%;
+                        justify-self: center;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        
+                        @include respond(small-screen-two-popup){
+                            grid-row: 2;
+                            grid-column: 3;
+                            width: 100%;
+                            height: 3rem;
+
+                        }
+
+                    }
+
+            }
+    }
+}
