@@ -10,5 +10,6 @@ https://magdalent.github.io/Frontend-Practice-Monogram/
 
 #### the resposive pure scss tabs on the downlads page:
 <img src="https://github.com/magdalent/Frontend-Practice-Monogram/blob/main/img3.png" alt="drawing" width="500"/>
+<img src="https://github.com/magdalent/Frontend-Practice-Monogram/blob/main/img4.png" alt="drawing" width="300"/>
 
 #### Note: This is an unofficial project
